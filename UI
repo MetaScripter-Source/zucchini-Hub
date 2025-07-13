@@ -145,7 +145,7 @@ end)
 local timerRunning = false
 
 Tab:CreateButton({
-   Name = "Dupe",
+   Name = "Dupe(Click)",
    Callback = function()
       if timerRunning then
          Rayfield:Notify({
