@@ -214,11 +214,22 @@ Tab:CreateButton({
 })
 
 -- ☀️ Shading Enhancer
+local shadingApplied = false -- one-time use flag
 Tab:CreateSection("☀️ Shading Enhancer")
 Tab:CreateButton({
     Name = "Shading",
     Callback = function()
+        if shadingApplied then
+            NotifyWithSound({
+                Title = "Already Applied",
+                Content = "Shading has already been applied.",
+                Duration = 3
+            })
+            return
+        end
+
         ClickSound:Play()
+        shadingApplied = true
 
         local Lighting = game:GetService("Lighting")
 
@@ -245,7 +256,7 @@ Tab:CreateButton({
 
         -- Add Bloom
         local bloom = Instance.new("BloomEffect")
-        bloom.Intensity = 0.9
+        bloom.Intensity = 1.2
         bloom.Size = 56
         bloom.Threshold = 0.85
         bloom.Parent = Lighting
