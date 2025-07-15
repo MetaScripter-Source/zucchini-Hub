@@ -213,6 +213,65 @@ Tab:CreateButton({
     end
 })
 
+-- ☀️ Shading Enhancer
+Tab:CreateSection("☀️ Shading Enhancer")
+Tab:CreateButton({
+    Name = "Shading",
+    Callback = function()
+        ClickSound:Play()
+
+        local Lighting = game:GetService("Lighting")
+
+        -- Basic realistic lighting settings
+        Lighting.Brightness = 2
+        Lighting.ClockTime = 16
+        Lighting.GlobalShadows = true
+        Lighting.EnvironmentDiffuseScale = 0.4
+        Lighting.EnvironmentSpecularScale = 1
+        Lighting.OutdoorAmbient = Color3.fromRGB(100, 100, 100)
+        Lighting.Ambient = Color3.fromRGB(90, 90, 90)
+        Lighting.ColorShift_Top = Color3.fromRGB(255, 220, 200)
+        Lighting.ColorShift_Bottom = Color3.fromRGB(180, 180, 210)
+
+        -- Add Atmosphere
+        local atmosphere = Instance.new("Atmosphere")
+        atmosphere.Density = 0.35
+        atmosphere.Offset = 0.25
+        atmosphere.Color = Color3.fromRGB(200, 205, 255)
+        atmosphere.Decay = Color3.fromRGB(85, 85, 100)
+        atmosphere.Glare = 1.5
+        atmosphere.Haze = 2
+        atmosphere.Parent = Lighting
+
+        -- Add Bloom
+        local bloom = Instance.new("BloomEffect")
+        bloom.Intensity = 0.9
+        bloom.Size = 56
+        bloom.Threshold = 0.85
+        bloom.Parent = Lighting
+
+        -- Add SunRays
+        local sunRays = Instance.new("SunRaysEffect")
+        sunRays.Intensity = 0.2
+        sunRays.Spread = 0.5
+        sunRays.Parent = Lighting
+
+        -- Optional: ColorCorrection
+        local cc = Instance.new("ColorCorrectionEffect")
+        cc.TintColor = Color3.fromRGB(255, 240, 220)
+        cc.Saturation = 0.1
+        cc.Contrast = 0.0
+        cc.Brightness = 0
+        cc.Parent = Lighting
+
+        NotifyWithSound({
+            Title = "Shading Enabled",
+            Content = "Lighting effects have been applied.",
+            Duration = 4
+        })
+    end
+})
+
 -- 🔧 Script Tools Tab
 local ScriptsTab = Window:CreateTab("Script Tools", 9405930424)
 ScriptsTab:CreateLabel("While waiting, you can execute scripts here:")
