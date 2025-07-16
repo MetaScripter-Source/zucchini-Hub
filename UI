@@ -321,15 +321,15 @@ ScriptsTab:CreateButton({
     end
 })
 
--- Create new tab
-local Tab = Window:CreateTab("Troll", 140731226103831)
+--- Create new tab
+local FETab = Window:CreateTab("FE Scripts", 4483362458)
 
 -- Create section
-local TextSection = FETab:CreateSection("Every One can see")
+local TextSection = FETab:CreateSection("Text Section")
 
 -- Create button
 FETab:CreateButton({
-    Name = "Fe Goon",
+    Name = "Example Script",
     Callback = function()
         -- Optional: Play click sound if defined
         if ClickSound then ClickSound:Play() end
@@ -339,7 +339,7 @@ FETab:CreateButton({
             Title = "Script Executed",
             Content = "The script has been successfully run!",
             Duration = 5,
-            Image = "rbxassetid://115325242657629" -- optional custom image
+            Image = "rbxassetid://108941556941066" -- optional custom image
         })
 
         -- Execute your script here (replace with any script you want)
