@@ -321,7 +321,7 @@ ScriptsTab:CreateButton({
     end
 })
 
-local Tab = Window:CreateTab("Main", 96265482350413)
+local Tab = Window:CreateTab("Troll", 96265482350413)
 
 -- Load any saved configuration
 Rayfield:LoadConfiguration()
