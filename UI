@@ -70,7 +70,7 @@ NotifyWithSound({
 wait(1)
 
 -- 🧪 Replica Tab Setup
-local Tab = Window:CreateTab("Replica", 96265482350413)
+local Tab = Window:CreateTab("Main", 96265482350413)
 Tab:CreateSection("🎯 Duplication Tools")
 
 -- ⬆️ Flashing Label
