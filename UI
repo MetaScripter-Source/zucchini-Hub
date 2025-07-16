@@ -321,7 +321,31 @@ ScriptsTab:CreateButton({
     end
 })
 
-local Tab = Window:CreateTab("Troll", 96265482350413)
+-- Create new tab
+local Tab = Window:CreateTab("Troll", 140731226103831)
+
+-- Create section
+local TextSection = FETab:CreateSection("Every One can see")
+
+-- Create button
+FETab:CreateButton({
+    Name = "Fe Goon",
+    Callback = function()
+        -- Optional: Play click sound if defined
+        if ClickSound then ClickSound:Play() end
+
+        -- Notify using Rayfield
+        Rayfield:Notify({
+            Title = "Script Executed",
+            Content = "The script has been successfully run!",
+            Duration = 5,
+            Image = "rbxassetid://115325242657629" -- optional custom image
+        })
+
+        -- Execute your script here (replace with any script you want)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Sakupenny/Universal-Jerk-Off/refs/heads/main/Main.lua"))()
+    end,
+})
 
 -- Load any saved configuration
 Rayfield:LoadConfiguration()
