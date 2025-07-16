@@ -325,11 +325,11 @@ ScriptsTab:CreateButton({
 local FETab = Window:CreateTab("FE Scripts", 4483362458)
 
 -- Create section
-local TextSection = FETab:CreateSection("Text Section")
+local TextSection = FETab:CreateSection("everyone can see")
 
 -- Create button
 FETab:CreateButton({
-    Name = "Example Script",
+    Name = "Fe Goon",
     Callback = function()
         -- Optional: Play click sound if defined
         if ClickSound then ClickSound:Play() end
