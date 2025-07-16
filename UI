@@ -11,7 +11,7 @@ ClickSound.Volume = 1
 -- ✅ Rayfield Load
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-    Name = "Zucchini Hub",
+    Name = "Zucchini Hub (Grow a garden)",
     Icon = 0,
     LoadingTitle = "universal Script",
     LoadingSubtitle = "by Gino",
